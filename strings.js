@@ -20,7 +20,7 @@ console.log(email);
 console.log(email.toUpperCase());
 console.log(email.toLowerCase());
 
-// indexOf, lasrIndexOf, chartAt
+// indexOf, lastIndexOf, chartAt
 console.log(email.charAt(1));
 console.log(email.indexOf("o"));
 console.log(email.lastIndexOf("o"));

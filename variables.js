@@ -6,6 +6,7 @@ let x = 8;
 x = 90;
 let y = 5;
 y = 80;
+
 console.log(x, y);
 
 const a = 10;
@@ -18,8 +19,8 @@ console.log(a);
 // 2. no special characters or space in between
 // 3. variables are case sensitive myName MYNAME
 // 4. reserved key words let const if, while for
-// CONVENTIOBNS
+// CONVENTIONS
 // 1. we write vogical varibles names 
-- const weight = 67;
+ const weight = 67;
 // 2. compound names account number my age (camelCasing) - const accountNumber = 48868606, const myAge = 78;
 // 3. 
