@@ -38,14 +38,14 @@ console.log(username.trim());
 console.log(username.trimStart());
 console.log(username.trimEnd());
 
-// replace replaceALL
+// replace replaceAll
 
 // 01************80
 const myName  = "jane doe";
 console.log(myName.replace("jane", "peter"));
 console.log(myName.replaceAll("e", "*"));
 
-// extract portion of a string slice substring (start, end) substr(start, number of characters),
+// extract portion of a string, slice substring (start, end) substr(start, number of characters),
 console.log(myName.slice(0, 3));
 console.log(myName.substring(0, 3));
 console.log(myName.substr(0, 2));

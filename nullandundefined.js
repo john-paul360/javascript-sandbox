@@ -4,7 +4,7 @@
 let user = null;
 // a b c  d x y z
 
-// x (no product found)
+// t (no product found)
 
 // after log in
 
