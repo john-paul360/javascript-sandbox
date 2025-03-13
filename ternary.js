@@ -1,6 +1,6 @@
 // TERNARY OPERATORS (more than two choices)
 // if else
-// CONDITION ? first action : second acton
+// CONDITION ? first action(TRUE) : second acton(FALSE)
 
 const myNumber = -50;
 

@@ -1,14 +1,25 @@
-// ERRORS BUGS
-const num = 8;
-num > 0 ? console.log("POSITIVE") : console.log("NEGATIVE");
+function calcSumOfNums() {
+  const num1 = prompt("Enter First Number: ");
+  const num2 = prompt("Enter Second Number: ");
 
-// syntax error - (our own error)
-num > 0 ? console.log("positive") : console.log("negative");
+  console.log(Number(num1) + parseInt(num2));
+}
+calcSumOfNums();
 
-console.log("hello world");
+// type conversion
+// numbers to strings toString, String
+// 60 ==> "60"
 
-// refference error (spelling error)
-console.log(num);
+const num = 98;
+console.log(typeof num);
+console.log(typeof num.toString());
+console.log(typeof String(num));
 
-// typeerror 
-console.log(num.includes("@"));
+// Strings to number ade '98' -- 98
+// Numbers parseInt
+
+const myStr = "30";
+console.log(typeof myStr);
+console.log(typeof Number(myStr));
+console.log(typeof parseInt(myStr));
+console.log(parseInt(myStr) * 2);
