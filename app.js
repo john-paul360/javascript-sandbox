@@ -24,9 +24,9 @@ const customer = ["Kelvin", "John", "Khalid", "david", "Tom", "Paul"];
 
 const randomWinner = () => {
     let randomNumber = Math.floor(Math.random() * customer.length);
-    return customer(randomNumber)
+    return customer[randomNumber]
 }
 
-cconsole.log(randomWinner());
+console.log(randomWinner());
 
 // OTP GENERATOR
