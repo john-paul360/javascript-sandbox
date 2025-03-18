@@ -35,7 +35,7 @@ console.log("wale" / 4);
 console.log("50" - 4);
 // 46
 
-// whenever astring is involved with + ---> string concatenation
+// whenever a string is involved with + ---> string concatenation
 // e.g '50' + 4 == '504'
 // however a valid Number string '24' is involved with other
 // math operators - corced to behave as a number e.g '50' - 5 =45
