@@ -1,4 +1,4 @@
-// OBJECT - ( it gives the ability to describe a variables,  they are denoted by coily braket, )
+// OBJECT - ( it gives the ability to describe a variables,  they are denoted by coily bracket, )
 // OBJECT - (KEY: value, key2: value2)
 // OBJECT - (it is unstructured data type)
 
@@ -88,7 +88,7 @@ console.log(user.VerifyUser());
 // year poblished 2010
 // rating 3.
 const book = {
-  title: "Battle field of jay mind",
+  title: "Battle field of the mind",
   author: "Joyce Meyer",
   year: "2010",
   rating: 5,
