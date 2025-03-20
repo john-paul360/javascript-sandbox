@@ -1,63 +1,67 @@
-const cars = [
-  { name: "Lamborghii Huracan", rentprice: 100, category: "sport" },
-  { name: "Range Rover valer", rentprice: 70, category: "Suv" },
-  { name: "Audi R8", rentprice: 120, category: "Sprot" },
-  { name: "Mustang", rentprice: 80, category: "Vintage" },
-  { name: "Porche 911", rentprice: 120, category: "Sport" },
-  { name: "Chevrolet Camero 1970", rentprice: 80, category: "Vintage" },
-  { name: "Roll Royce", rentprice: 70, category: "Sport" },
-  { name: "Tesla Model X", rentprice: 120, category: "Suv" },
-  { name: "BMW X5", rentprice: 40, category: "Suv" },
-  { name: "Volkswagon Beetle 1972", rentprice: 30, category: "Vintage" },
-];
-cars[1];
-cars[0].name;
+// write a simple ATM js algo
+// checkBalance
+// withdrawAmount
+// depositAmount
+// chekPin
 
-const vintageCars = cars.filter((car) => car.category === "vintage");
-console.log(vintageCars);
+let balance = 5000;
+let pin = 1234;
+let attempts = 3;
 
-let totalrentPrice = cars.reduce((acc, car) => acc + car.rentPrice, 0);
+function checkBalance () {
+    return `Your current balance is $${balance}`;
+} ;
 
-const carsMorethan100 = cars.every((c) => c.rentPrice > 100);
-
-let myName = "Kelvin";
-// == ===
-
-let data = {
-  success: true,
-  message: "Product in Stock",
-  products: ["Glasses", "Lipssticks", "Shoes"],
+function withdrawAmount (amount) {
+    if (amount <= balance) {
+        balance -= amount;
+        return "Withdrawal Successfull";
+    } else {
+        return "Insuficient Funds";
+    }
 };
+// console.log(withdrawAmount(1000));
 
-console.log(data.products[2]);
-
-const { products } = data;
-products[2];
-
-
-const meals = [
-  {
-    meal: {
-      name: "Sushi",
-      price: 45,
-      category: "Side",
-    },
-  },
-];
-
-console.log(meals[0].meal.name);
-
-const airline = {
-    types: [
-        {
-            name: {
-                brand: "Air Peace",
-                brand2: "Green Africa",
-                brand3: "Max Air",
-                brand4: "Emirates",
-            },
-        },
-    ],
+// depositAmount
+function depositAmount (amount) {
+    balance += amount;
+     return "Deposit Successfull"
 };
+// console.log(depositAmount(2000));
 
-console.log(airline.types[0].name.brand3);
+// checkPin
+  function checkPin (enteredPin){
+    const enteredPin = 
+    while (attempts > 0) {
+    if (enteredPin === pin) {
+        return "Welcome User";
+    } else {
+        attempts = 3;
+         return `Pin Failed, ${attempts} attempts left`;
+    }
+}
+     return "Your Card has been blocked";
+  };
+
+//   console.log(checkPin(6567));
+//   console.log(checkPin(6567));
+//   console.log(checkPin(1234));
+
+  function startAtm (choice) {
+    if (choice === 1) {
+        // return "withdrawal";
+        withdrawAmount(1000);
+    } else if (choice === 2) {
+        // return "deposit";
+        depositAmount(3000)
+    } else if (choice === 3) {
+        // return "Check Balance";
+        checkBalance();
+    } else if (choice === 4) {
+        // return "Thank You for Banking with us";
+    } else {
+        return "Invalid option, Try again";
+    }
+  };
+
+//   console.log(startAtm());
