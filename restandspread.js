@@ -1,5 +1,5 @@
 // REST AND SPREAD OPERATOR
-// ......
+// ...
 
 const user = {
     name: "John Carter",

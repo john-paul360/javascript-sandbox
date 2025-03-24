@@ -1,67 +1,113 @@
-// write a simple ATM js algo
-// checkBalance
-// withdrawAmount
-// depositAmount
-// chekPin
+// DOCUMENT OBJECT MODEL (DOM)
 
-let balance = 5000;
-let pin = 1234;
-let attempts = 3;
+// SELECT ELEMNET on the document, tagName (h1, p), className, idName,
+// COMBINATION
 
-function checkBalance () {
-    return `Your current balance is $${balance}`;
-} ;
+// tagName
+// const headings = document.getElementsByTagName("h1");
+// console.log(headings);
 
-function withdrawAmount (amount) {
-    if (amount <= balance) {
-        balance -= amount;
-        return "Withdrawal Successfull";
-    } else {
-        return "Insuficient Funds";
-    }
-};
-// console.log(withdrawAmount(1000));
+// const myH1s = document.getElementsByClassName("heading");
+// console.log(myH1s);
 
-// depositAmount
-function depositAmount (amount) {
-    balance += amount;
-     return "Deposit Successfull"
-};
-// console.log(depositAmount(2000));
+// const textPara = document.getElementById("text");
+// console.log(textPara);
 
-// checkPin
-  function checkPin (enteredPin){
-    const enteredPin = 
-    while (attempts > 0) {
-    if (enteredPin === pin) {
-        return "Welcome User";
-    } else {
-        attempts = 3;
-         return `Pin Failed, ${attempts} attempts left`;
-    }
-}
-     return "Your Card has been blocked";
-  };
+// querySelector(css selector) one
+// ., #, div p, div .inner
 
-//   console.log(checkPin(6567));
-//   console.log(checkPin(6567));
-//   console.log(checkPin(1234));
+// queryselector, for one
+// const firstPara = document.querySelector("p");
+// console.log(firstPara);
 
-  function startAtm (choice) {
-    if (choice === 1) {
-        // return "withdrawal";
-        withdrawAmount(1000);
-    } else if (choice === 2) {
-        // return "deposit";
-        depositAmount(3000)
-    } else if (choice === 3) {
-        // return "Check Balance";
-        checkBalance();
-    } else if (choice === 4) {
-        // return "Thank You for Banking with us";
-    } else {
-        return "Invalid option, Try again";
-    }
-  };
+// querySelectorAll, for all
+// const allParas = document.querySelectorAll("p");
+// console.log(allParas);
 
-//   console.log(startAtm());
+
+// INTERACTING WITH THE CONTENTS ON THE DOCUMENT
+// texttContent, innerText, innerHTML
+
+// textContent / innerText
+const heading = document.querySelector(".heading");
+console.log(heading.textContent);
+console.log(heading.innerText);
+
+// to change or add content
+heading.textContent += "JS IS FUN";
+// heading.inerrText = "JS IS FUN";
+
+// innerHTML
+const container = document.querySelector("div");
+console.log(container.innerHTML);
+
+container.innerHTML += "<span href='https://google.com'> visit google</a>";
+
+const myName = "John Paul";
+const initails = "J.P";
+const intro = document.querySelector("h2");
+intro.textContent = `welCome ${myName}`;
+// welCome initials
+
+// INTERACT WITH ATTRIBUTES
+const mylink = document.querySelector(".mylink");
+
+// facebook
+mylink.textContent = "Facebook";
+mylink.setAttribute("href", "https://facebook.com");
+mylink.setAttribute("target", "_blank");
+mylink.getAttribute("href");
+console.log(mylink.getAttribute("href"));
+
+// INTERACTING WITH STYLES
+mylink.style.color = "red";
+mylink.style.textDecoration = "none";
+
+// 
+const btn = document.querySelector("button");
+
+// btn.className = "mybtn";
+// claslist
+btn.classList.add("mybtn");
+btn.classList.add("kevin");
+btn.classList.remove("kevin");
+
+// CREATE AN ELEMENT IN JS
+
+const section = document.createElement("section");
+section.innerHTML = "<h1>created from JS,</h1>";
+section.className = "mysection";
+
+// APPEND IT -BODY- or wherever it is needed
+const body = document.querySelector("body");
+
+body.appendChild(section);
+
+// RESPONDING TO USERS INTERACTION
+// 1. event e.g (click), submit
+// 2. event e.g (handler), function
+const testbtn = document.querySelector(".testbtn");
+
+testbtn,addEventListener("click", () => {
+    console.log("User click");
+    body.style.backgroundColor = "yellowgreen";
+});
+// FORM HANDLING (TWO WAYS) 
+// SUBMIT (WORKS ON FORM)
+// CLICK (WORKS ON THE BUTTON)
+// FORM refreshes the page when submitted
+const form = document.querySelector("form");
+const fullname = document.querySelector(".fullname");
+const small = document.querySelector("form small");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const fullNameValue = fullname.value.trim();
+  console.log("form submitted", fullNameValue);
+
+  // validate the input
+  if (fullNameValue === "") {
+    small.style.display = "block";
+    small.textContent = "please provide a name";
+  }
+});

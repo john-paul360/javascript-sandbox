@@ -1,0 +1,22 @@
+.mybtn {
+    background-color: brown;
+    color: yellowgreen;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+.idan{
+    text-transform: uppercase;
+}
+.mysection {
+    background-color: blue;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+small {
+    display: none;
+    color: red;
+}

@@ -16,7 +16,7 @@ const hasAcar = false;
 
 const sentence =  `Mr Mario ${hasAcar ? "has" : "does not have"} a car`;
 console.log(sentence);
-// declear a variable called isuserloggedin set to either T or F
+// de clear a variable called isuserloggedin set to either T or F
 
 const isuserLoggedIn = false
 isuserLoggedIn ? console.log("Welcome user") : console.log("Log out");
